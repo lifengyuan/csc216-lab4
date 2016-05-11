@@ -64,7 +64,7 @@ void printdt(int from, struct distance_table* dt) {
     printf("     3|  %3d   %3d   %3d\n", dt->costs[3][1],
                                          dt->costs[3][2],
                                          dt->costs[3][3]);
-                                         
+
   } else if(from == 1) {
     printf("             via   \n");
     printf("   D1 |    0     2 \n");
@@ -72,7 +72,7 @@ void printdt(int from, struct distance_table* dt) {
     printf("     0|  %3d   %3d\n", dt->costs[0][0], dt->costs[0][2]);
     printf("dest 2|  %3d   %3d\n", dt->costs[2][0], dt->costs[2][2]);
     printf("     3|  %3d   %3d\n", dt->costs[3][0], dt->costs[3][2]);
-    
+
   } else if(from == 2) {
     printf("                via     \n");
     printf("   D2 |    0     1    3 \n");
@@ -80,13 +80,13 @@ void printdt(int from, struct distance_table* dt) {
     printf("     0|  %3d   %3d   %3d\n", dt->costs[0][0],
                                          dt->costs[0][1],
                                          dt->costs[0][3]);
-    printf("dest 1|  %3d   %3d   %3d\n", dt->costs[1][0], 
+    printf("dest 1|  %3d   %3d   %3d\n", dt->costs[1][0],
                                          dt->costs[1][1],
                                          dt->costs[1][3]);
     printf("     3|  %3d   %3d   %3d\n", dt->costs[3][0],
                                          dt->costs[3][1],
                                          dt->costs[3][3]);
-                                         
+
   } else if(from == 3) {
     printf("             via     \n");
     printf("   D3 |    0     2 \n");
@@ -94,7 +94,7 @@ void printdt(int from, struct distance_table* dt) {
     printf("     0|  %3d   %3d\n", dt->costs[0][0], dt->costs[0][2]);
     printf("dest 1|  %3d   %3d\n", dt->costs[1][0], dt->costs[1][2]);
     printf("     2|  %3d   %3d\n", dt->costs[2][0], dt->costs[2][2]);
-  
+
   } else {
     fprintf(stderr, "Invalid ID from=%d\n", from);
     abort();
@@ -134,11 +134,11 @@ int main() {
     }
 
     evlist = evlist->next; /* remove this event from event list */
-    
+
     if (evlist != NULL) {
       evlist->prev = NULL;
     }
-    
+
     if (TRACE > 1) {
       printf("MAIN: rcv event, t=%.3f, at %d", eventptr->evtime,
              eventptr->eventity);
@@ -196,11 +196,11 @@ void init() {
 
   srand(9999); /* init random number generator */
   sum = 0.0;   /* test random number generator for students */
-  
+
   for (i = 0; i < 1000; i++) {
     sum = sum + jimsrand(); /* jimsrand() should be uniform in [0,1] */
   }
-  
+
   avg = sum / 1000.0;
   if (avg < 0.25 || avg > 0.75) {
     printf("It is likely that random number generation on your machine\n");
@@ -347,11 +347,11 @@ void tolayer2(struct rtpkt packet) {
   mypktptr = (struct rtpkt *)malloc(sizeof(struct rtpkt));
   mypktptr->sourceid = packet.sourceid;
   mypktptr->destid = packet.destid;
-  
+
   for (i = 0; i < 4; i++) {
     mypktptr->mincost[i] = packet.mincost[i];
   }
-  
+
   if (TRACE > 2) {
     printf("    TOLAYER2: source: %d, dest: %d\n              costs:",
            mypktptr->sourceid, mypktptr->destid);
@@ -380,7 +380,7 @@ void tolayer2(struct rtpkt packet) {
   if (TRACE > 2) {
     printf("    TOLAYER2: scheduling arrival on other side\n");
   }
-  
+
   insertevent(evptr);
 }
 
@@ -408,14 +408,15 @@ extern void rtinit0(){
 			}
 		}
 	}
+  packet.mincost[0] = 0;
 	packet.sourceid = 0;
 	packet.destid = 1;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 0;
 	packet.destid = 2;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 0;
 	packet.destid = 3;
 	tolayer2(packet);
@@ -441,10 +442,11 @@ extern void rtinit1(){
 			}
 		}
 	}
+  packet.mincost[1] = 0;
 	packet.sourceid = 1;
 	packet.destid = 0;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 1;
 	packet.destid = 2;
 	tolayer2(packet);
@@ -466,23 +468,25 @@ extern void rtinit2(){
 	//find and save the minmum costs if they exist
 	for(i = 0; i< 4; i++){
 		for(j = 0; j<4;j++){
-			if(packet.mincost[i] > dt2.costs[i][j]){
+			if(packet.mincost[i] > dt2.costs[i][j] ){
 				packet.mincost[i] = dt2.costs[i][j];
 			}
 		}
 	}
+  packet.mincost[2] = 0;
 	packet.sourceid = 2;
 	packet.destid = 0;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 2;
 	packet.destid = 1;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 2;
 	packet.destid = 3;
 	tolayer2(packet);
 }
+
 extern void rtinit3(){
 	//Init min cost
 	int i,j;
@@ -504,14 +508,16 @@ extern void rtinit3(){
 			}
 		}
 	}
+  packet.mincost[3] = 0;
 	packet.sourceid = 3;
 	packet.destid = 0;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 3;
 	packet.destid = 2;
 	tolayer2(packet);
 }
+
 extern void rtupdate0(struct rtpkt *rcvdpkt){
 	int needUpdate = 0;
 	int i,j;
@@ -533,14 +539,15 @@ extern void rtupdate0(struct rtpkt *rcvdpkt){
 				}
 			}
 		}
+    packet.mincost[0] = 0;
 		packet.sourceid = 0;
 		packet.destid = 1;
 		tolayer2(packet);
-	
+
 		packet.sourceid = 0;
 		packet.destid = 2;
 		tolayer2(packet);
-	
+
 		packet.sourceid = 0;
 		packet.destid = 3;
 		tolayer2(packet);
@@ -568,20 +575,17 @@ extern void rtupdate1(struct rtpkt *rcvdpkt){
 				}
 			}
 		}
+    packet.mincost[1] = 0;
 		packet.sourceid = 1;
 		packet.destid = 0;
 		tolayer2(packet);
-	
+
 		packet.sourceid = 1;
 		packet.destid = 2;
 		tolayer2(packet);
-	
-		packet.sourceid = 0;
-		packet.destid = 3;
-		tolayer2(packet);
 	}
 	printdt(1, &dt1);
-	
+
 }
 extern void rtupdate2(struct rtpkt *rcvdpkt){
 	int needUpdate = 0;
@@ -604,14 +608,15 @@ extern void rtupdate2(struct rtpkt *rcvdpkt){
 				}
 			}
 		}
+    packet.mincost[2] = 0;
 		packet.sourceid = 2;
 		packet.destid = 0;
 		tolayer2(packet);
-	
+
 		packet.sourceid = 2;
 		packet.destid = 1;
 		tolayer2(packet);
-	
+
 		packet.sourceid = 2;
 		packet.destid = 3;
 		tolayer2(packet);
@@ -626,7 +631,7 @@ extern void rtupdate3(struct rtpkt *rcvdpkt){
 	}
 	printf("At time t=%.3f, rtupdate3() called. node 3 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
 	for(i = 0; i< 4; ++i){
-		if(rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt3.costs[i][rcvdpkt->sourceid]){
+		if((rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid]) < dt3.costs[i][rcvdpkt->sourceid]){
 			needUpdate = 1;
 			dt3.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
 		}
@@ -639,10 +644,11 @@ extern void rtupdate3(struct rtpkt *rcvdpkt){
 				}
 			}
 		}
+    packet.mincost[3] = 0;
 		packet.sourceid = 3;
 		packet.destid = 0;
 		tolayer2(packet);
-	
+
 		packet.sourceid = 3;
 		packet.destid = 2;
 		tolayer2(packet);
@@ -656,12 +662,12 @@ extern void linkhandler0(int linkid, int newcost){
 	packet.destid = 1;
 	packet.mincost[linkid] = newcost;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 0;
 	packet.destid = 2;
 	packet.mincost[linkid] = newcost;
 	tolayer2(packet);
-		
+
 	packet.sourceid = 0;
 	packet.destid = 3;
 	packet.mincost[linkid] = newcost;
@@ -671,12 +677,12 @@ extern void linkhandler0(int linkid, int newcost){
 extern void linkhandler1(int linkid, int newcost){
 	printf("At time t=%.3f, linkhandler1() called \n", clocktime);
 	dt1.costs[1][linkid] = newcost;
-	
+
 	packet.sourceid = 1;
 	packet.destid = 1;
 	packet.mincost[linkid] = newcost;
 	tolayer2(packet);
-	
+
 	packet.sourceid = 1;
 	packet.destid = 2;
 	packet.mincost[linkid] = newcost;

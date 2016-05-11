@@ -56,14 +56,14 @@ void printdt(int from, struct distance_table* dt) {
     printf("   D0 |    1     2    3 \n");
     printf("  ----|-----------------\n");
     printf("     1|  %3d   %3d   %3d\n", dt->costs[1][1],
-                                         dt->costs[1][2],
-                                         dt->costs[1][3]);
+           dt->costs[1][2],
+           dt->costs[1][3]);
     printf("dest 2|  %3d   %3d   %3d\n", dt->costs[2][1],
-                                         dt->costs[2][2],
-                                         dt->costs[2][3]);
+           dt->costs[2][2],
+           dt->costs[2][3]);
     printf("     3|  %3d   %3d   %3d\n", dt->costs[3][1],
-                                         dt->costs[3][2],
-                                         dt->costs[3][3]);
+           dt->costs[3][2],
+           dt->costs[3][3]);
                                          
   } else if(from == 1) {
     printf("             via   \n");
@@ -78,14 +78,14 @@ void printdt(int from, struct distance_table* dt) {
     printf("   D2 |    0     1    3 \n");
     printf("  ----|-----------------\n");
     printf("     0|  %3d   %3d   %3d\n", dt->costs[0][0],
-                                         dt->costs[0][1],
-                                         dt->costs[0][3]);
+           dt->costs[0][1],
+           dt->costs[0][3]);
     printf("dest 1|  %3d   %3d   %3d\n", dt->costs[1][0], 
-                                         dt->costs[1][1],
-                                         dt->costs[1][3]);
+           dt->costs[1][1],
+           dt->costs[1][3]);
     printf("     3|  %3d   %3d   %3d\n", dt->costs[3][0],
-                                         dt->costs[3][1],
-                                         dt->costs[3][3]);
+           dt->costs[3][1],
+           dt->costs[3][3]);
                                          
   } else if(from == 3) {
     printf("             via     \n");
@@ -387,298 +387,298 @@ void tolayer2(struct rtpkt packet) {
 struct distance_table dt0, dt1, dt2, dt3;
 struct rtpkt packet;
 extern void rtinit0(){
-	//Init min cost
-	int i,j;
-	printf("At time t=%.3f, rtinit0() called \n", clocktime);
-	for(i = 0; i< 4; i++){
-		packet.mincost[i] = INFINITY;
-		for(j = 0; j<4;j++){
-			dt0.costs[i][j] = INFINITY;
-		}
-	}
-	//save the distance
-	dt0.costs[1][1] = 1;
-	dt0.costs[2][2] = 3;
-	dt0.costs[3][3] = 7;
-	//find and save the minmum costs if they exist
-	for(i = 0; i< 4; i++){
-		for(j = 0; j<4;j++){
-			if(packet.mincost[i] > dt0.costs[i][j]){
-				packet.mincost[i] = dt0.costs[i][j];
-			}
-		}
-	}
-	packet.sourceid = 0;
-	packet.destid = 1;
-	tolayer2(packet);
+  //Init min cost
+  int i,j;
+  printf("At time t=%.3f, rtinit0() called \n", clocktime);
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+    for(j = 0; j<4;j++){
+      dt0.costs[i][j] = INFINITY;
+    }
+  }
+  //save the distance
+  dt0.costs[1][1] = 1;
+  dt0.costs[2][2] = 3;
+  dt0.costs[3][3] = 7;
+  //find and save the minmum costs if they exist
+  for(i = 0; i< 4; i++){
+    for(j = 0; j<4;j++){
+      if(packet.mincost[i] > dt0.costs[i][j]){
+        packet.mincost[i] = dt0.costs[i][j];
+      }
+    }
+  }
+  packet.sourceid = 0;
+  packet.destid = 1;
+  tolayer2(packet);
 	
-	packet.sourceid = 0;
-	packet.destid = 2;
-	tolayer2(packet);
+  packet.sourceid = 0;
+  packet.destid = 2;
+  tolayer2(packet);
 	
-	packet.sourceid = 0;
-	packet.destid = 3;
-	tolayer2(packet);
+  packet.sourceid = 0;
+  packet.destid = 3;
+  tolayer2(packet);
 }
 extern void rtinit1(){
-	//Init min cost
-	int i,j;
-	printf("At time t=%.3f, rtinit1() called \n", clocktime);
-	for(i = 0; i< 4; i++){
-		packet.mincost[i] = INFINITY;
-		for(j = 0; j<4;j++){
-			dt1.costs[i][j] = INFINITY;
-		}
-	}
-	//save the distance
-	dt1.costs[0][0] = 1;
-	dt1.costs[2][2] = 1;
-	//find and save the minmum costs if they exist
-	for(i = 0; i< 4; i++){
-		for(j = 0; j<4;j++){
-			if(packet.mincost[i] > dt1.costs[i][j]){
-				packet.mincost[i] = dt1.costs[i][j];
-			}
-		}
-	}
-	packet.sourceid = 1;
-	packet.destid = 0;
-	tolayer2(packet);
+  //Init min cost
+  int i,j;
+  printf("At time t=%.3f, rtinit1() called \n", clocktime);
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+    for(j = 0; j<4;j++){
+      dt1.costs[i][j] = INFINITY;
+    }
+  }
+  //save the distance
+  dt1.costs[0][0] = 1;
+  dt1.costs[2][2] = 1;
+  //find and save the minmum costs if they exist
+  for(i = 0; i< 4; i++){
+    for(j = 0; j<4;j++){
+      if(packet.mincost[i] > dt1.costs[i][j]){
+        packet.mincost[i] = dt1.costs[i][j];
+      }
+    }
+  }
+  packet.sourceid = 1;
+  packet.destid = 0;
+  tolayer2(packet);
 	
-	packet.sourceid = 1;
-	packet.destid = 2;
-	tolayer2(packet);
+  packet.sourceid = 1;
+  packet.destid = 2;
+  tolayer2(packet);
 }
 extern void rtinit2(){
-	//Init min cost
-	int i,j;
-	printf("At time t=%.3f, rtinit2() called \n", clocktime);
-	for(i = 0; i< 4; i++){
-		packet.mincost[i] = INFINITY;
-		for(j = 0; j<4;j++){
-			dt2.costs[i][j] = INFINITY;
-		}
-	}
-	//save the distance
-	dt2.costs[0][0] = 3;
-	dt2.costs[1][1] = 1;
-	dt2.costs[3][3] = 2;
-	//find and save the minmum costs if they exist
-	for(i = 0; i< 4; i++){
-		for(j = 0; j<4;j++){
-			if(packet.mincost[i] > dt2.costs[i][j]){
-				packet.mincost[i] = dt2.costs[i][j];
-			}
-		}
-	}
-	packet.sourceid = 2;
-	packet.destid = 0;
-	tolayer2(packet);
+  //Init min cost
+  int i,j;
+  printf("At time t=%.3f, rtinit2() called \n", clocktime);
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+    for(j = 0; j<4;j++){
+      dt2.costs[i][j] = INFINITY;
+    }
+  }
+  //save the distance
+  dt2.costs[0][0] = 3;
+  dt2.costs[1][1] = 1;
+  dt2.costs[3][3] = 2;
+  //find and save the minmum costs if they exist
+  for(i = 0; i< 4; i++){
+    for(j = 0; j<4;j++){
+      if(packet.mincost[i] > dt2.costs[i][j]){
+        packet.mincost[i] = dt2.costs[i][j];
+      }
+    }
+  }
+  packet.sourceid = 2;
+  packet.destid = 0;
+  tolayer2(packet);
 	
-	packet.sourceid = 2;
-	packet.destid = 1;
-	tolayer2(packet);
+  packet.sourceid = 2;
+  packet.destid = 1;
+  tolayer2(packet);
 	
-	packet.sourceid = 2;
-	packet.destid = 3;
-	tolayer2(packet);
+  packet.sourceid = 2;
+  packet.destid = 3;
+  tolayer2(packet);
 }
 extern void rtinit3(){
-	//Init min cost
-	int i,j;
-	printf("At time t=%.3f, rtinit3() called \n", clocktime);
-	for(i = 0; i< 4; i++){
-		packet.mincost[i] = INFINITY;
-		for(j = 0; j<4;j++){
-			dt3.costs[i][j] = INFINITY;
-		}
-	}
-	//save the distance
-	dt3.costs[0][0] = 7;
-	dt3.costs[2][2] = 2;
-	//find and save the minmum costs if they exist
-	for(i = 0; i< 4; i++){
-		for(j = 0; j<4;j++){
-			if(packet.mincost[i] > dt3.costs[i][j]){
-				packet.mincost[i] = dt3.costs[i][j];
-			}
-		}
-	}
-	packet.sourceid = 3;
-	packet.destid = 0;
-	tolayer2(packet);
+  //Init min cost
+  int i,j;
+  printf("At time t=%.3f, rtinit3() called \n", clocktime);
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+    for(j = 0; j<4;j++){
+      dt3.costs[i][j] = INFINITY;
+    }
+  }
+  //save the distance
+  dt3.costs[0][0] = 7;
+  dt3.costs[2][2] = 2;
+  //find and save the minmum costs if they exist
+  for(i = 0; i< 4; i++){
+    for(j = 0; j<4;j++){
+      if(packet.mincost[i] > dt3.costs[i][j]){
+        packet.mincost[i] = dt3.costs[i][j];
+      }
+    }
+  }
+  packet.sourceid = 3;
+  packet.destid = 0;
+  tolayer2(packet);
 	
-	packet.sourceid = 3;
-	packet.destid = 2;
-	tolayer2(packet);
+  packet.sourceid = 3;
+  packet.destid = 2;
+  tolayer2(packet);
 }
 extern void rtupdate0(struct rtpkt *rcvdpkt){
-	int needUpdate = 0;
-	int i,j;
-	for(i = 0; i< 4; i++){
-	packet.mincost[i] = INFINITY;
-	}
-	printf("At time t=%.3f, rtupdate0() called. node 0 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
-	for(i = 0; i< 4; ++i){
-		if(rcvdpkt->mincost[i] + dt0.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt0.costs[i][rcvdpkt->sourceid]){
-			needUpdate = 1;
-			dt0.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt0.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
-		}
-	}
-	if(needUpdate){
-		for(i = 0; i< 4; i++){
-			for(j = 0; j<4 ; j++){
-				if(packet.mincost[i]>dt0.costs[i][j]){
-					packet.mincost[i]=dt0.costs[i][j];
-				}
-			}
-		}
-		packet.sourceid = 0;
-		packet.destid = 1;
-		tolayer2(packet);
+  int needUpdate = 0;
+  int i,j;
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+  }
+  printf("At time t=%.3f, rtupdate0() called. node 0 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
+  for(i = 0; i< 4; ++i){
+    if(rcvdpkt->mincost[i] + dt0.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt0.costs[i][rcvdpkt->sourceid]){
+      needUpdate = 1;
+      dt0.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt0.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
+    }
+  }
+  if(needUpdate){
+    for(i = 0; i< 4; i++){
+      for(j = 0; j<4 ; j++){
+        if(packet.mincost[i]>dt0.costs[i][j]){
+          packet.mincost[i]=dt0.costs[i][j];
+        }
+      }
+    }
+    packet.sourceid = 0;
+    packet.destid = 1;
+    tolayer2(packet);
 	
-		packet.sourceid = 0;
-		packet.destid = 2;
-		tolayer2(packet);
+    packet.sourceid = 0;
+    packet.destid = 2;
+    tolayer2(packet);
 	
-		packet.sourceid = 0;
-		packet.destid = 3;
-		tolayer2(packet);
-	}
-	printdt(0, &dt0);
+    packet.sourceid = 0;
+    packet.destid = 3;
+    tolayer2(packet);
+  }
+  printdt(0, &dt0);
 }
 extern void rtupdate1(struct rtpkt *rcvdpkt){
-	int needUpdate = 0;
-	int i,j;
-	for(i = 0; i< 4; i++){
-	packet.mincost[i] = INFINITY;
-	}
-	printf("At time t=%.3f, rtupdate1() called. node 1 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
-	for(i = 0; i< 4; ++i){
-		if(rcvdpkt->mincost[i] + dt1.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt1.costs[i][rcvdpkt->sourceid]){
-			needUpdate = 1;
-			dt1.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt1.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
-		}
-	}
-	if(needUpdate){
-		for(i = 0; i< 4; i++){
-			for(j = 0; j<4 ; j++){
-				if(packet.mincost[i]>dt1.costs[i][j]){
-					packet.mincost[i]=dt1.costs[i][j];
-				}
-			}
-		}
-		packet.sourceid = 1;
-		packet.destid = 0;
-		tolayer2(packet);
+  int needUpdate = 0;
+  int i,j;
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+  }
+  printf("At time t=%.3f, rtupdate1() called. node 1 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
+  for(i = 0; i< 4; ++i){
+    if(rcvdpkt->mincost[i] + dt1.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt1.costs[i][rcvdpkt->sourceid]){
+      needUpdate = 1;
+      dt1.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt1.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
+    }
+  }
+  if(needUpdate){
+    for(i = 0; i< 4; i++){
+      for(j = 0; j<4 ; j++){
+        if(packet.mincost[i]>dt1.costs[i][j]){
+          packet.mincost[i]=dt1.costs[i][j];
+        }
+      }
+    }
+    packet.sourceid = 1;
+    packet.destid = 0;
+    tolayer2(packet);
 	
-		packet.sourceid = 1;
-		packet.destid = 2;
-		tolayer2(packet);
+    packet.sourceid = 1;
+    packet.destid = 2;
+    tolayer2(packet);
 	
-		packet.sourceid = 0;
-		packet.destid = 3;
-		tolayer2(packet);
-	}
-	printdt(1, &dt1);
+    packet.sourceid = 0;
+    packet.destid = 3;
+    tolayer2(packet);
+  }
+  printdt(1, &dt1);
 	
 }
 extern void rtupdate2(struct rtpkt *rcvdpkt){
-	int needUpdate = 0;
-	int i,j;
-	for(i = 0; i< 4; i++){
-	packet.mincost[i] = INFINITY;
-	}
-	printf("At time t=%.3f, rtupdate2() called. node 2 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
-	for(i = 0; i< 4; ++i){
-		if(rcvdpkt->mincost[i] + dt2.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt2.costs[i][rcvdpkt->sourceid]){
-			needUpdate = 1;
-			dt2.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt2.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
-		}
-	}
-	if(needUpdate){
-		for(i = 0; i< 4; i++){
-			for(j = 0; j<4 ; j++){
-				if(packet.mincost[i]>dt2.costs[i][j]){
-					packet.mincost[i]=dt2.costs[i][j];
-				}
-			}
-		}
-		packet.sourceid = 2;
-		packet.destid = 0;
-		tolayer2(packet);
+  int needUpdate = 0;
+  int i,j;
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+  }
+  printf("At time t=%.3f, rtupdate2() called. node 2 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
+  for(i = 0; i< 4; ++i){
+    if(rcvdpkt->mincost[i] + dt2.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt2.costs[i][rcvdpkt->sourceid]){
+      needUpdate = 1;
+      dt2.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt2.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
+    }
+  }
+  if(needUpdate){
+    for(i = 0; i< 4; i++){
+      for(j = 0; j<4 ; j++){
+        if(packet.mincost[i]>dt2.costs[i][j]){
+          packet.mincost[i]=dt2.costs[i][j];
+        }
+      }
+    }
+    packet.sourceid = 2;
+    packet.destid = 0;
+    tolayer2(packet);
 	
-		packet.sourceid = 2;
-		packet.destid = 1;
-		tolayer2(packet);
+    packet.sourceid = 2;
+    packet.destid = 1;
+    tolayer2(packet);
 	
-		packet.sourceid = 2;
-		packet.destid = 3;
-		tolayer2(packet);
-	}
-	printdt(2, &dt2);
+    packet.sourceid = 2;
+    packet.destid = 3;
+    tolayer2(packet);
+  }
+  printdt(2, &dt2);
 }
 extern void rtupdate3(struct rtpkt *rcvdpkt){
-	int needUpdate = 0;
-	int i,j;
-	for(i = 0; i< 4; i++){
-	packet.mincost[i] = INFINITY;
-	}
-	printf("At time t=%.3f, rtupdate3() called. node 3 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
-	for(i = 0; i< 4; ++i){
-		if(rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt3.costs[i][rcvdpkt->sourceid]){
-			needUpdate = 1;
-			dt3.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
-		}
-	}
-	if(needUpdate){
-		for(i = 0; i< 4; i++){
-			for(j = 0; j<4 ; j++){
-				if(packet.mincost[i]>dt3.costs[i][j]){
-					packet.mincost[i]=dt3.costs[i][j];
-				}
-			}
-		}
-		packet.sourceid = 3;
-		packet.destid = 0;
-		tolayer2(packet);
+  int needUpdate = 0;
+  int i,j;
+  for(i = 0; i< 4; i++){
+    packet.mincost[i] = INFINITY;
+  }
+  printf("At time t=%.3f, rtupdate3() called. node 3 receives a packet from node %d\n",clocktime,rcvdpkt->sourceid );
+  for(i = 0; i< 4; ++i){
+    if(rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid] < dt3.costs[i][rcvdpkt->sourceid]){
+      needUpdate = 1;
+      dt3.costs[i][rcvdpkt->sourceid] = rcvdpkt->mincost[i] + dt3.costs[rcvdpkt->sourceid][rcvdpkt->sourceid];
+    }
+  }
+  if(needUpdate){
+    for(i = 0; i< 4; i++){
+      for(j = 0; j<4 ; j++){
+        if(packet.mincost[i]>dt3.costs[i][j]){
+          packet.mincost[i]=dt3.costs[i][j];
+        }
+      }
+    }
+    packet.sourceid = 3;
+    packet.destid = 0;
+    tolayer2(packet);
 	
-		packet.sourceid = 3;
-		packet.destid = 2;
-		tolayer2(packet);
-	}
-	printdt(3, &dt3);
+    packet.sourceid = 3;
+    packet.destid = 2;
+    tolayer2(packet);
+  }
+  printdt(3, &dt3);
 }
 extern void linkhandler0(int linkid, int newcost){
-	printf("At time t=%.3f, linkhandler0() called \n", clocktime);
-	dt0.costs[0][linkid] = newcost;
-	packet.sourceid = 0;
-	packet.destid = 1;
-	packet.mincost[linkid] = newcost;
-	tolayer2(packet);
+  printf("At time t=%.3f, linkhandler0() called \n", clocktime);
+  dt0.costs[0][linkid] = newcost;
+  packet.sourceid = 0;
+  packet.destid = 1;
+  packet.mincost[linkid] = newcost;
+  tolayer2(packet);
 	
-	packet.sourceid = 0;
-	packet.destid = 2;
-	packet.mincost[linkid] = newcost;
-	tolayer2(packet);
+  packet.sourceid = 0;
+  packet.destid = 2;
+  packet.mincost[linkid] = newcost;
+  tolayer2(packet);
 		
-	packet.sourceid = 0;
-	packet.destid = 3;
-	packet.mincost[linkid] = newcost;
-	tolayer2(packet);
+  packet.sourceid = 0;
+  packet.destid = 3;
+  packet.mincost[linkid] = newcost;
+  tolayer2(packet);
 
 }
 extern void linkhandler1(int linkid, int newcost){
-	printf("At time t=%.3f, linkhandler1() called \n", clocktime);
-	dt1.costs[1][linkid] = newcost;
+  printf("At time t=%.3f, linkhandler1() called \n", clocktime);
+  dt1.costs[1][linkid] = newcost;
 	
-	packet.sourceid = 1;
-	packet.destid = 1;
-	packet.mincost[linkid] = newcost;
-	tolayer2(packet);
+  packet.sourceid = 1;
+  packet.destid = 1;
+  packet.mincost[linkid] = newcost;
+  tolayer2(packet);
 	
-	packet.sourceid = 1;
-	packet.destid = 2;
-	packet.mincost[linkid] = newcost;
-	tolayer2(packet);
+  packet.sourceid = 1;
+  packet.destid = 2;
+  packet.mincost[linkid] = newcost;
+  tolayer2(packet);
 }

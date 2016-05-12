@@ -671,7 +671,7 @@ extern void linkhandler0(int linkid, int newcost){
             }
           }
   }
-  prevLinkCost = newcost;
+  prevLinkCostdr = newcost;
   printdt(0,&dt0);
 
   packet.sourceid = 0;

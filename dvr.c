@@ -386,6 +386,7 @@ void tolayer2(struct rtpkt packet) {
 
 struct distance_table dt0, dt1, dt2, dt3;
 struct rtpkt packet;
+
 extern void rtinit0(){
 	//Init min cost
 	int i,j;
@@ -655,36 +656,65 @@ extern void rtupdate3(struct rtpkt *rcvdpkt){
 	}
 	printdt(3, &dt3);
 }
+// to save the previous link costs
+int prevLinkCost = 1;
+
 extern void linkhandler0(int linkid, int newcost){
 	printf("At time t=%.3f, linkhandler0() called \n", clocktime);
-	dt0.costs[0][linkid] = newcost;
-	packet.sourceid = 0;
+  printf("New cost of linkhandler0 %d is: %d \n",linkid, newcost);
+  int i, j;
+  for(i = 0; i < 4; i++){
+          dt0.costs[i][linkid] = newcost + dt0.costs[i][linkid] - prevLinkCost;
+          for(j =0; j < 4; j++){
+            if(dt0.costs[i][j] < packet.mincost[i]){
+              packet.mincost[i]  = dt0.costs[i][j];
+            }
+          }
+  }
+  prevLinkCost = newcost;
+  printdt(0,&dt0);
+
+  packet.sourceid = 0;
 	packet.destid = 1;
-	packet.mincost[linkid] = newcost;
+  packet.mincost[0] = 0;
 	tolayer2(packet);
 
-	packet.sourceid = 0;
+  packet.sourceid = 0;
 	packet.destid = 2;
-	packet.mincost[linkid] = newcost;
+  packet.mincost[0] = 0;
 	tolayer2(packet);
 
 	packet.sourceid = 0;
 	packet.destid = 3;
-	packet.mincost[linkid] = newcost;
+  packet.mincost[0] = 0;
 	tolayer2(packet);
+
 
 }
 extern void linkhandler1(int linkid, int newcost){
 	printf("At time t=%.3f, linkhandler1() called \n", clocktime);
-	dt1.costs[1][linkid] = newcost;
+  printf("New cost of linkhandler1 %d is: %d \n",linkid, newcost);
 
-	packet.sourceid = 1;
-	packet.destid = 1;
-	packet.mincost[linkid] = newcost;
-	tolayer2(packet);
+  int i, j;
+  for(i = 0; i < 4; i++){
+          dt1.costs[i][linkid] = newcost + dt1.costs[i][linkid] - prevLinkCost;
+          for(j =0; j < 4; j++){
+            if(dt1.costs[i][j] < packet.mincost[i]){
+              packet.mincost[i]  = dt1.costs[i][j];
+            }
+          }
+  }
+  prevLinkCost = newcost;
+  printdt(1,&dt1);
 
 	packet.sourceid = 1;
 	packet.destid = 2;
-	packet.mincost[linkid] = newcost;
+  packet.mincost[1] = 0;
 	tolayer2(packet);
+
+  packet.sourceid = 1;
+  packet.destid = 0;
+  packet.mincost[1] = 0;
+  tolayer2(packet);
+
 }

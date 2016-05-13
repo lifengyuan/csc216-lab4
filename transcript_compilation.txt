@@ -1,0 +1,3 @@
+kleene$ gcc -o dvr dvr.c
+kleene$ ./dvr
+

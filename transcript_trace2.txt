@@ -3,758 +3,758 @@ At time t=0.000, rtinit0() called
 At time t=0.000, rtinit1() called 
 At time t=0.000, rtinit2() called 
 At time t=0.000, rtinit3() called 
-MAIN: rcv event, t=0.420, at 3 src: 0, dest: 3, contents:   0   1   3   7
-At time t=0.420, rtupdate3() called. node 3 receives a packet from node 0
+MAIN: rcv event, t=0.947, at 3 src: 0, dest: 3, contents:   0   1   3   7
+At time t=0.947, rtupdate3() called. node 3 receives a packet from node 0
              via     
    D3 |    0     2 
   ----|-----------
      0|    7   9999
 dest 1|    8   9999
      2|   10     2
-MAIN: rcv event, t=0.689, at 3 src: 2, dest: 3, contents:   3   1   0   2
-At time t=0.689, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     5
-dest 1|    8     3
-     2|   10     2
-MAIN: rcv event, t=0.697, at 1 src: 0, dest: 1, contents:   0   1   3   7
-At time t=0.697, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1   9999
-dest 2|    4     1
-     3|    8   9999
-MAIN: rcv event, t=0.980, at 0 src: 1, dest: 0, contents:   1   0   1 9999
-At time t=0.980, rtupdate0() called. node 0 receives a packet from node 1
+MAIN: rcv event, t=0.992, at 0 src: 1, dest: 0, contents:   1   0   1 9999
+At time t=0.992, rtupdate0() called. node 0 receives a packet from node 1
                 via     
    D0 |    1     2    3 
   ----|-----------------
      1|    1   9999   9999
 dest 2|    2     3   9999
      3|  9999   9999     7
-MAIN: rcv event, t=1.270, at 2 src: 0, dest: 2, contents:   0   1   3   7
-At time t=1.270, rtupdate2() called. node 2 receives a packet from node 0
+MAIN: rcv event, t=1.209, at 3 src: 2, dest: 3, contents:   3   1   0   2
+At time t=1.209, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|   10     2
+MAIN: rcv event, t=1.276, at 3 src: 0, dest: 3, contents:   0   1   2   7
+At time t=1.276, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     5
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=1.642, at 2 src: 0, dest: 2, contents:   0   1   3   7
+At time t=1.642, rtupdate2() called. node 2 receives a packet from node 0
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3   9999   9999
 dest 1|    4     1   9999
      3|   10   9999     2
-MAIN: rcv event, t=1.532, at 1 src: 2, dest: 1, contents:   3   1   0   2
-At time t=1.532, rtupdate1() called. node 1 receives a packet from node 2
+MAIN: rcv event, t=1.871, at 1 src: 0, dest: 1, contents:   0   1   3   7
+At time t=1.871, rtupdate1() called. node 1 receives a packet from node 0
              via   
    D1 |    0     2 
   ----|-----------
-     0|    1     4
+     0|    1   9999
 dest 2|    4     1
-     3|    8     3
-MAIN: rcv event, t=2.007, at 2 src: 1, dest: 2, contents:   1   0   1 9999
-At time t=2.007, rtupdate2() called. node 2 receives a packet from node 1
+     3|    8   9999
+MAIN: rcv event, t=2.166, at 2 src: 1, dest: 2, contents:   1   0   1 9999
+At time t=2.166, rtupdate2() called. node 2 receives a packet from node 1
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2   9999
 dest 1|    4     1   9999
      3|   10   9999     2
-MAIN: rcv event, t=2.147, at 0 src: 2, dest: 0, contents:   3   1   0   2
-At time t=2.147, rtupdate0() called. node 0 receives a packet from node 2
+MAIN: rcv event, t=2.407, at 0 src: 2, dest: 0, contents:   3   1   0   2
+At time t=2.407, rtupdate0() called. node 0 receives a packet from node 2
                 via     
    D0 |    1     2    3 
   ----|-----------------
      1|    1     4   9999
 dest 2|    2     3   9999
      3|  9999     5     7
-MAIN: rcv event, t=2.336, at 1 src: 0, dest: 1, contents:   0   1   2   7
-At time t=2.336, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     4
-dest 2|    3     1
-     3|    8     3
-MAIN: rcv event, t=2.786, at 3 src: 0, dest: 3, contents:   0   1   2   7
-At time t=2.786, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     5
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=3.045, at 0 src: 3, dest: 0, contents:   7 9999   2   0
-At time t=3.045, rtupdate0() called. node 0 receives a packet from node 3
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4   9999
-dest 2|    2     3     9
-     3|  9999     5     7
-MAIN: rcv event, t=3.613, at 2 src: 3, dest: 2, contents:   7 9999   2   0
-At time t=3.613, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=2.421, at 2 src: 3, dest: 2, contents:   7 9999   2   0
+At time t=2.421, rtupdate2() called. node 2 receives a packet from node 3
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     9
 dest 1|    4     1   9999
      3|   10   9999     2
-MAIN: rcv event, t=4.106, at 1 src: 2, dest: 1, contents:   3   1   0   2
-At time t=4.106, rtupdate1() called. node 1 receives a packet from node 2
+MAIN: rcv event, t=2.811, at 1 src: 2, dest: 1, contents:   3   1   0   2
+At time t=2.811, rtupdate1() called. node 1 receives a packet from node 2
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     4
-dest 2|    3     1
+dest 2|    4     1
      3|    8     3
-MAIN: rcv event, t=4.109, at 3 src: 2, dest: 3, contents:   3   1   0   2
-At time t=4.109, rtupdate3() called. node 3 receives a packet from node 2
+MAIN: rcv event, t=3.078, at 3 src: 2, dest: 3, contents:   3   1   0   2
+At time t=3.078, rtupdate3() called. node 3 receives a packet from node 2
              via     
    D3 |    0     2 
   ----|-----------
      0|    7     5
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=4.940, at 0 src: 3, dest: 0, contents:   7   8   2   0
-At time t=4.940, rtupdate0() called. node 0 receives a packet from node 3
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    15
-dest 2|    2     3     9
-     3|  9999     5     7
-MAIN: rcv event, t=5.234, at 2 src: 3, dest: 2, contents:   7   8   2   0
-At time t=5.234, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=3.293, at 2 src: 3, dest: 2, contents:   7   8   2   0
+At time t=3.293, rtupdate2() called. node 2 receives a packet from node 3
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     9
 dest 1|    4     1    10
      3|   10   9999     2
-MAIN: rcv event, t=5.264, at 0 src: 3, dest: 0, contents:   5   3   2   0
-At time t=5.264, rtupdate0() called. node 0 receives a packet from node 3
+MAIN: rcv event, t=4.063, at 2 src: 0, dest: 2, contents:   0   1   2   7
+At time t=4.063, rtupdate2() called. node 2 receives a packet from node 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     9
+dest 1|    4     1    10
+     3|   10   9999     2
+MAIN: rcv event, t=4.104, at 0 src: 3, dest: 0, contents:   7 9999   2   0
+At time t=4.104, rtupdate0() called. node 0 receives a packet from node 3
                 via     
    D0 |    1     2    3 
   ----|-----------------
-     1|    1     4    10
+     1|    1     4   9999
 dest 2|    2     3     9
      3|  9999     5     7
-MAIN: rcv event, t=5.291, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=5.291, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    8     3
-MAIN: rcv event, t=5.557, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=5.557, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=6.367, at 1 src: 0, dest: 1, contents:   0   1   2   5
-At time t=6.367, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    6     3
-MAIN: rcv event, t=6.772, at 1 src: 0, dest: 1, contents:   0   1   2   5
-At time t=6.772, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    6     3
-MAIN: rcv event, t=6.862, at 3 src: 0, dest: 3, contents:   0   1   2   5
-At time t=6.862, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=6.868, at 3 src: 0, dest: 3, contents:   0   1   2   5
-At time t=6.868, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=6.887, at 0 src: 1, dest: 0, contents:   1   0   1   8
-At time t=6.887, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    9     5     7
-MAIN: rcv event, t=6.921, at 0 src: 2, dest: 0, contents:   3   1   0   2
-At time t=6.921, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    9     5     7
-MAIN: rcv event, t=7.168, at 2 src: 3, dest: 2, contents:   5   3   2   0
-At time t=7.168, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=4.169, at 2 src: 3, dest: 2, contents:   5   3   2   0
+At time t=4.169, rtupdate2() called. node 2 receives a packet from node 3
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     7
 dest 1|    4     1     5
      3|   10   9999     2
-MAIN: rcv event, t=8.034, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=8.034, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    6     3
-MAIN: rcv event, t=8.070, at 0 src: 1, dest: 0, contents:   1   0   1   3
-At time t=8.070, rtupdate0() called. node 0 receives a packet from node 1
+MAIN: rcv event, t=4.330, at 0 src: 3, dest: 0, contents:   7   8   2   0
+At time t=4.330, rtupdate0() called. node 0 receives a packet from node 3
                 via     
    D0 |    1     2    3 
   ----|-----------------
-     1|    1     4    10
+     1|    1     4    15
 dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=8.073, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=8.073, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=8.527, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=8.527, rtupdate3() called. node 3 receives a packet from node 2
+     3|  9999     5     7
+MAIN: rcv event, t=4.557, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=4.557, rtupdate3() called. node 3 receives a packet from node 2
              via     
    D3 |    0     2 
   ----|-----------
      0|    7     4
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=8.724, at 1 src: 0, dest: 1, contents:   0   1   2   5
-At time t=8.724, rtupdate1() called. node 1 receives a packet from node 0
+MAIN: rcv event, t=4.643, at 1 src: 0, dest: 1, contents:   0   1   2   7
+At time t=4.643, rtupdate1() called. node 1 receives a packet from node 0
              via   
    D1 |    0     2 
   ----|-----------
-     0|    1     3
+     0|    1     4
 dest 2|    3     1
-     3|    6     3
-MAIN: rcv event, t=9.034, at 3 src: 0, dest: 3, contents:   0   1   2   5
-At time t=9.034, rtupdate3() called. node 3 receives a packet from node 0
+     3|    8     3
+MAIN: rcv event, t=5.093, at 3 src: 0, dest: 3, contents:   0   1   2   5
+At time t=5.093, rtupdate3() called. node 3 receives a packet from node 0
              via     
    D3 |    0     2 
   ----|-----------
      0|    7     4
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=9.069, at 2 src: 1, dest: 2, contents:   1   0   1   8
-At time t=9.069, rtupdate2() called. node 2 receives a packet from node 1
+MAIN: rcv event, t=5.213, at 0 src: 3, dest: 0, contents:   5   3   2   0
+At time t=5.213, rtupdate0() called. node 0 receives a packet from node 3
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  9999     5     7
+MAIN: rcv event, t=5.271, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=5.271, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=5.378, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=5.378, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=5.740, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=5.740, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=5.820, at 1 src: 2, dest: 1, contents:   3   1   0   2
+At time t=5.820, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     4
+dest 2|    3     1
+     3|    8     3
+MAIN: rcv event, t=5.935, at 3 src: 0, dest: 3, contents:   0   1   2   5
+At time t=5.935, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=6.042, at 2 src: 3, dest: 2, contents:   5   3   2   0
+At time t=6.042, rtupdate2() called. node 2 receives a packet from node 3
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|   10   9999     2
+MAIN: rcv event, t=6.071, at 0 src: 3, dest: 0, contents:   5   3   2   0
+At time t=6.071, rtupdate0() called. node 0 receives a packet from node 3
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  9999     5     7
+MAIN: rcv event, t=6.205, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=6.205, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    8     3
+MAIN: rcv event, t=6.886, at 1 src: 0, dest: 1, contents:   0   1   2   5
+At time t=6.886, rtupdate1() called. node 1 receives a packet from node 0
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=7.012, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=7.012, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=7.021, at 0 src: 2, dest: 0, contents:   3   1   0   2
+At time t=7.021, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|  9999     5     7
+MAIN: rcv event, t=7.060, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=7.060, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=7.160, at 2 src: 1, dest: 2, contents:   1   0   1   8
+At time t=7.160, rtupdate2() called. node 2 receives a packet from node 1
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     7
 dest 1|    4     1     5
      3|   10     9     2
-MAIN: rcv event, t=9.347, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=9.347, rtupdate3() called. node 3 receives a packet from node 2
+MAIN: rcv event, t=7.464, at 2 src: 0, dest: 2, contents:   0   1   2   5
+At time t=7.464, rtupdate2() called. node 2 receives a packet from node 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     9     2
+MAIN: rcv event, t=7.732, at 0 src: 1, dest: 0, contents:   1   0   1   8
+At time t=7.732, rtupdate0() called. node 0 receives a packet from node 1
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+MAIN: rcv event, t=7.961, at 3 src: 0, dest: 3, contents:   0   1   2   5
+At time t=7.961, rtupdate3() called. node 3 receives a packet from node 0
              via     
    D3 |    0     2 
   ----|-----------
      0|    7     4
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=9.662, at 0 src: 1, dest: 0, contents:   1   0   1   3
-At time t=9.662, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=10.166, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=10.166, rtupdate1() called. node 1 receives a packet from node 2
+MAIN: rcv event, t=8.438, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=8.438, rtupdate1() called. node 1 receives a packet from node 2
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
      3|    6     3
-MAIN: rcv event, t=10.670, at 1 src: 0, dest: 1, contents:   0   1   2   5
-At time t=10.670, rtupdate1() called. node 1 receives a packet from node 0
+MAIN: rcv event, t=8.630, at 2 src: 1, dest: 2, contents:   1   0   1   3
+At time t=8.630, rtupdate2() called. node 2 receives a packet from node 1
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=8.810, at 3 src: 0, dest: 3, contents:   0   1   2   5
+At time t=8.810, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=9.513, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=9.513, rtupdate1() called. node 1 receives a packet from node 2
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
      3|    6     3
-MAIN: rcv event, t=10.683, at 3 src: 0, dest: 3, contents:   0   1   2   5
-At time t=10.683, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=11.022, at 2 src: 0, dest: 2, contents:   0   1   2   7
-At time t=11.022, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|   10     9     2
-MAIN: rcv event, t=11.496, at 0 src: 3, dest: 0, contents:   5   3   2   0
-At time t=11.496, rtupdate0() called. node 0 receives a packet from node 3
+MAIN: rcv event, t=9.514, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=9.514, rtupdate0() called. node 0 receives a packet from node 2
                 via     
    D0 |    1     2    3 
   ----|-----------------
      1|    1     4    10
 dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=11.540, at 3 src: 0, dest: 3, contents:   0   1   2   5
-At time t=11.540, rtupdate3() called. node 3 receives a packet from node 0
+     3|    9     5     7
+MAIN: rcv event, t=10.531, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=10.531, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    9     5     7
+MAIN: rcv event, t=10.568, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=10.568, rtupdate3() called. node 3 receives a packet from node 2
              via     
    D3 |    0     2 
   ----|-----------
      0|    7     4
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=11.846, at 1 src: 0, dest: 1, contents:   0   1   2   5
-At time t=11.846, rtupdate1() called. node 1 receives a packet from node 0
+MAIN: rcv event, t=10.577, at 2 src: 0, dest: 2, contents:   0   1   2   5
+At time t=10.577, rtupdate2() called. node 2 receives a packet from node 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     7
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=10.705, at 1 src: 0, dest: 1, contents:   0   1   2   5
+At time t=10.705, rtupdate1() called. node 1 receives a packet from node 0
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
      3|    6     3
-MAIN: rcv event, t=12.426, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=12.426, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=12.447, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=12.447, rtupdate1() called. node 1 receives a packet from node 2
+MAIN: rcv event, t=10.718, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=10.718, rtupdate1() called. node 1 receives a packet from node 2
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
      3|    6     3
-MAIN: rcv event, t=12.518, at 1 src: 0, dest: 1, contents:   0   1   2   4
-At time t=12.518, rtupdate1() called. node 1 receives a packet from node 0
+MAIN: rcv event, t=10.786, at 1 src: 0, dest: 1, contents:   0   1   2   5
+At time t=10.786, rtupdate1() called. node 1 receives a packet from node 0
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=12.553, at 1 src: 0, dest: 1, contents:   0   1   2   4
-At time t=12.553, rtupdate1() called. node 1 receives a packet from node 0
+     3|    6     3
+MAIN: rcv event, t=10.899, at 1 src: 0, dest: 1, contents:   0   1   2   5
+At time t=10.899, rtupdate1() called. node 1 receives a packet from node 0
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=12.596, at 3 src: 0, dest: 3, contents:   0   1   2   4
-At time t=12.596, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=12.746, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=12.746, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=12.961, at 2 src: 1, dest: 2, contents:   1   0   1   3
-At time t=12.961, rtupdate2() called. node 2 receives a packet from node 1
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|   10     4     2
-MAIN: rcv event, t=13.505, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=13.505, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=13.585, at 0 src: 1, dest: 0, contents:   1   0   1   3
-At time t=13.585, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=13.716, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=13.716, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=13.918, at 3 src: 0, dest: 3, contents:   0   1   2   4
-At time t=13.918, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=13.989, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=13.989, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=14.385, at 0 src: 3, dest: 0, contents:   4   3   2   0
-At time t=14.385, rtupdate0() called. node 0 receives a packet from node 3
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=14.839, at 2 src: 0, dest: 2, contents:   0   1   2   5
-At time t=14.839, rtupdate2() called. node 2 receives a packet from node 0
+     3|    6     3
+MAIN: rcv event, t=11.448, at 2 src: 0, dest: 2, contents:   0   1   2   5
+At time t=11.448, rtupdate2() called. node 2 receives a packet from node 0
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     7
 dest 1|    4     1     5
      3|    8     4     2
-MAIN: rcv event, t=14.887, at 2 src: 1, dest: 2, contents:   1   0   1   3
-At time t=14.887, rtupdate2() called. node 2 receives a packet from node 1
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=15.072, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=15.072, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=15.293, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=15.293, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=15.987, at 2 src: 3, dest: 2, contents:   5   3   2   0
-At time t=15.987, rtupdate2() called. node 2 receives a packet from node 3
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=16.147, at 0 src: 1, dest: 0, contents:   1   0   1   3
-At time t=16.147, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=16.273, at 1 src: 0, dest: 1, contents:   0   1   2   4
-At time t=16.273, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=16.833, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=16.833, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=17.871, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=17.871, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=17.982, at 2 src: 0, dest: 2, contents:   0   1   2   5
-At time t=17.982, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=18.074, at 0 src: 3, dest: 0, contents:   4   3   2   0
-At time t=18.074, rtupdate0() called. node 0 receives a packet from node 3
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=18.222, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=18.222, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=19.169, at 2 src: 0, dest: 2, contents:   0   1   2   5
-At time t=19.169, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=19.480, at 3 src: 0, dest: 3, contents:   0   1   2   4
-At time t=19.480, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=19.668, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=19.668, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=19.704, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=19.704, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=20.420, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=20.420, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=20.684, at 2 src: 0, dest: 2, contents:   0   1   2   5
-At time t=20.684, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=21.507, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=21.507, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=22.146, at 0 src: 1, dest: 0, contents:   1   0   1   3
-At time t=22.146, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=22.182, at 2 src: 1, dest: 2, contents:   1   0   1   3
-At time t=22.182, rtupdate2() called. node 2 receives a packet from node 1
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     7
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=22.355, at 0 src: 3, dest: 0, contents:   4   3   2   0
-At time t=22.355, rtupdate0() called. node 0 receives a packet from node 3
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=22.564, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=22.564, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=23.212, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=23.212, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=23.584, at 2 src: 3, dest: 2, contents:   4   3   2   0
-At time t=23.584, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=11.497, at 2 src: 3, dest: 2, contents:   4   3   2   0
+At time t=11.497, rtupdate2() called. node 2 receives a packet from node 3
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    8     4     2
-MAIN: rcv event, t=23.729, at 2 src: 1, dest: 2, contents:   1   0   1   3
-At time t=23.729, rtupdate2() called. node 2 receives a packet from node 1
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     6
-dest 1|    4     1     5
-     3|    8     4     2
-MAIN: rcv event, t=24.333, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=24.333, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|    1     4    10
-dest 2|    2     3     9
-     3|    4     5     7
-MAIN: rcv event, t=24.355, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=24.355, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=24.814, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=24.814, rtupdate3() called. node 3 receives a packet from node 2
+MAIN: rcv event, t=12.433, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=12.433, rtupdate3() called. node 3 receives a packet from node 2
              via     
    D3 |    0     2 
   ----|-----------
      0|    7     4
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=25.494, at 2 src: 3, dest: 2, contents:   4   3   2   0
-At time t=25.494, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=12.495, at 0 src: 1, dest: 0, contents:   1   0   1   3
+At time t=12.495, rtupdate0() called. node 0 receives a packet from node 1
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=12.660, at 3 src: 0, dest: 3, contents:   0   1   2   5
+At time t=12.660, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=12.729, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=12.729, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=13.082, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=13.082, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=13.197, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=13.197, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=13.226, at 2 src: 1, dest: 2, contents:   1   0   1   3
+At time t=13.226, rtupdate2() called. node 2 receives a packet from node 1
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    8     4     2
-MAIN: rcv event, t=25.692, at 2 src: 0, dest: 2, contents:   0   1   2   5
-At time t=25.692, rtupdate2() called. node 2 receives a packet from node 0
+MAIN: rcv event, t=13.394, at 2 src: 3, dest: 2, contents:   4   3   2   0
+At time t=13.394, rtupdate2() called. node 2 receives a packet from node 3
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    8     4     2
-MAIN: rcv event, t=26.134, at 2 src: 0, dest: 2, contents:   0   1   2   4
-At time t=26.134, rtupdate2() called. node 2 receives a packet from node 0
+MAIN: rcv event, t=13.936, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=13.936, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=14.040, at 2 src: 0, dest: 2, contents:   0   1   2   5
+At time t=14.040, rtupdate2() called. node 2 receives a packet from node 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=14.161, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=14.161, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=14.580, at 3 src: 0, dest: 3, contents:   0   1   2   5
+At time t=14.580, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=14.963, at 1 src: 0, dest: 1, contents:   0   1   2   5
+At time t=14.963, rtupdate1() called. node 1 receives a packet from node 0
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=15.028, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=15.028, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=15.192, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=15.192, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=15.221, at 2 src: 1, dest: 2, contents:   1   0   1   3
+At time t=15.221, rtupdate2() called. node 2 receives a packet from node 1
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=15.371, at 1 src: 0, dest: 1, contents:   0   1   2   5
+At time t=15.371, rtupdate1() called. node 1 receives a packet from node 0
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=15.813, at 2 src: 1, dest: 2, contents:   1   0   1   3
+At time t=15.813, rtupdate2() called. node 2 receives a packet from node 1
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=15.863, at 3 src: 0, dest: 3, contents:   0   1   2   4
+At time t=15.863, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=16.096, at 2 src: 0, dest: 2, contents:   0   1   2   5
+At time t=16.096, rtupdate2() called. node 2 receives a packet from node 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=16.123, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=16.123, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=16.338, at 2 src: 0, dest: 2, contents:   0   1   2   5
+At time t=16.338, rtupdate2() called. node 2 receives a packet from node 0
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    8     4     2
+MAIN: rcv event, t=16.485, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=16.485, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    6     3
+MAIN: rcv event, t=17.141, at 0 src: 3, dest: 0, contents:   4   3   2   0
+At time t=17.141, rtupdate0() called. node 0 receives a packet from node 3
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=17.501, at 2 src: 0, dest: 2, contents:   0   1   2   4
+At time t=17.501, rtupdate2() called. node 2 receives a packet from node 0
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
-MAIN: rcv event, t=27.622, at 1 src: 2, dest: 1, contents:   2   1   0   2
-At time t=27.622, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     3
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=27.822, at 3 src: 2, dest: 3, contents:   2   1   0   2
-At time t=27.822, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=27.843, at 2 src: 0, dest: 2, contents:   0   1   2   4
-At time t=27.843, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     2     6
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=27.987, at 0 src: 2, dest: 0, contents:   2   1   0   2
-At time t=27.987, rtupdate0() called. node 0 receives a packet from node 2
+MAIN: rcv event, t=17.527, at 0 src: 1, dest: 0, contents:   1   0   1   3
+At time t=17.527, rtupdate0() called. node 0 receives a packet from node 1
                 via     
    D0 |    1     2    3 
   ----|-----------------
      1|    1     4    10
 dest 2|    2     3     9
      3|    4     5     7
-MAIN: rcv event, t=28.517, at 2 src: 1, dest: 2, contents:   1   0   1   3
-At time t=28.517, rtupdate2() called. node 2 receives a packet from node 1
+MAIN: rcv event, t=17.750, at 1 src: 0, dest: 1, contents:   0   1   2   4
+At time t=17.750, rtupdate1() called. node 1 receives a packet from node 0
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+MAIN: rcv event, t=17.830, at 2 src: 3, dest: 2, contents:   4   3   2   0
+At time t=17.830, rtupdate2() called. node 2 receives a packet from node 3
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
-MAIN: rcv event, t=30.448, at 2 src: 3, dest: 2, contents:   4   3   2   0
-At time t=30.448, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=18.116, at 3 src: 0, dest: 3, contents:   0   1   2   4
+At time t=18.116, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=18.272, at 3 src: 2, dest: 3, contents:   2   1   0   2
+At time t=18.272, rtupdate3() called. node 3 receives a packet from node 2
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=18.693, at 0 src: 3, dest: 0, contents:   4   3   2   0
+At time t=18.693, rtupdate0() called. node 0 receives a packet from node 3
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=18.752, at 1 src: 0, dest: 1, contents:   0   1   2   4
+At time t=18.752, rtupdate1() called. node 1 receives a packet from node 0
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+MAIN: rcv event, t=18.938, at 2 src: 0, dest: 2, contents:   0   1   2   4
+At time t=18.938, rtupdate2() called. node 2 receives a packet from node 0
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
-MAIN: rcv event, t=31.075, at 2 src: 0, dest: 2, contents:   0   1   2   4
-At time t=31.075, rtupdate2() called. node 2 receives a packet from node 0
+MAIN: rcv event, t=19.054, at 2 src: 1, dest: 2, contents:   1   0   1   3
+At time t=19.054, rtupdate2() called. node 2 receives a packet from node 1
                 via     
    D2 |    0     1    3 
   ----|-----------------
      0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
+MAIN: rcv event, t=19.111, at 0 src: 1, dest: 0, contents:   1   0   1   3
+At time t=19.111, rtupdate0() called. node 0 receives a packet from node 1
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=20.277, at 1 src: 2, dest: 1, contents:   2   1   0   2
+At time t=20.277, rtupdate1() called. node 1 receives a packet from node 2
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+MAIN: rcv event, t=20.976, at 0 src: 1, dest: 0, contents:   1   0   1   3
+At time t=20.976, rtupdate0() called. node 0 receives a packet from node 1
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=22.336, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=22.336, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=22.398, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=22.398, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=22.615, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=22.615, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=22.863, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=22.863, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=23.856, at 0 src: 3, dest: 0, contents:   4   3   2   0
+At time t=23.856, rtupdate0() called. node 0 receives a packet from node 3
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=25.707, at 0 src: 2, dest: 0, contents:   2   1   0   2
+At time t=25.707, rtupdate0() called. node 0 receives a packet from node 2
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
+MAIN: rcv event, t=27.424, at 0 src: 1, dest: 0, contents:   1   0   1   3
+At time t=27.424, rtupdate0() called. node 0 receives a packet from node 1
+                via     
+   D0 |    1     2    3 
+  ----|-----------------
+     1|    1     4    10
+dest 2|    2     3     9
+     3|    4     5     7
 MAIN: rcv event, t=10000.000, at -1At time t=10000.000, linkhandler0() called 
 New cost of linkhandler0 1 is: 20 
                 via     
@@ -771,196 +771,44 @@ New cost of linkhandler1 0 is: 20
      0|    1     3
 dest 2|    3     1
      3|    5     3
-MAIN: rcv event, t=10000.087, at 3 src: 0, dest: 3, contents:   0   4   3   5
-At time t=10000.087, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     4
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=10000.434, at 2 src: 0, dest: 2, contents:   0   4   3   5
-At time t=10000.434, rtupdate2() called. node 2 receives a packet from node 0
+MAIN: rcv event, t=10000.754, at 0 src: 1, dest: 0, contents:  20   0   1   3
+At time t=10000.754, rtupdate0() called. node 0 receives a packet from node 1
                 via     
-   D2 |    0     1    3 
+   D0 |    1     2    3 
   ----|-----------------
-     0|    3     2     6
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=10000.492, at 1 src: 0, dest: 1, contents:   0   4   3   5
-At time t=10000.492, rtupdate1() called. node 1 receives a packet from node 0
+     1|   20     4    10
+dest 2|   21     3     9
+     3|   23     5     7
+MAIN: rcv event, t=10001.517, at 1 src: 0, dest: 1, contents:   0  20   3   5
+At time t=10001.517, rtupdate1() called. node 1 receives a packet from node 0
              via   
    D1 |    0     2 
   ----|-----------
      0|    1     3
 dest 2|    3     1
      3|    5     3
-MAIN: rcv event, t=10000.707, at 2 src: 1, dest: 2, contents:   0   0   1   3
-At time t=10000.707, rtupdate2() called. node 2 receives a packet from node 1
+MAIN: rcv event, t=10001.546, at 2 src: 0, dest: 2, contents:   0  20   3   5
+At time t=10001.546, rtupdate2() called. node 2 receives a packet from node 0
                 via     
    D2 |    0     1    3 
   ----|-----------------
-     0|    3     1     6
+     0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
-MAIN: rcv event, t=10000.772, at 3 src: 2, dest: 3, contents:   1   1   0   2
-At time t=10000.772, rtupdate3() called. node 3 receives a packet from node 2
+MAIN: rcv event, t=10001.874, at 3 src: 0, dest: 3, contents:   0  20   3   5
+At time t=10001.874, rtupdate3() called. node 3 receives a packet from node 0
              via     
    D3 |    0     2 
   ----|-----------
-     0|    7     3
+     0|    7     4
 dest 1|    8     3
      2|    9     2
-MAIN: rcv event, t=10001.934, at 0 src: 1, dest: 0, contents:   0   0   1   3
-At time t=10001.934, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|   20     4    10
-dest 2|   21     3     9
-     3|   23     5     7
-MAIN: rcv event, t=10002.600, at 2 src: 3, dest: 2, contents:   3   3   2   0
-At time t=10002.600, rtupdate2() called. node 2 receives a packet from node 3
+MAIN: rcv event, t=10003.124, at 2 src: 1, dest: 2, contents:  20   0   1   3
+At time t=10003.124, rtupdate2() called. node 2 receives a packet from node 1
                 via     
    D2 |    0     1    3 
   ----|-----------------
-     0|    3     1     5
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=10002.695, at 1 src: 2, dest: 1, contents:   1   1   0   2
-At time t=10002.695, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     2
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=10003.316, at 0 src: 2, dest: 0, contents:   1   1   0   2
-At time t=10003.316, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|   20     4    10
-dest 2|   21     3     9
-     3|   23     5     7
-MAIN: rcv event, t=10003.401, at 1 src: 0, dest: 1, contents:   0   4   3   5
-At time t=10003.401, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     2
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=10003.479, at 2 src: 0, dest: 2, contents:   0   4   3   5
-At time t=10003.479, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     1     5
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=10003.508, at 3 src: 0, dest: 3, contents:   0   4   3   5
-At time t=10003.508, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     3
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=10004.117, at 1 src: 2, dest: 1, contents:   1   1   0   2
-At time t=10004.117, rtupdate1() called. node 1 receives a packet from node 2
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     2
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=10004.974, at 0 src: 3, dest: 0, contents:   3   3   2   0
-At time t=10004.974, rtupdate0() called. node 0 receives a packet from node 3
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|   20     4    10
-dest 2|   21     3     9
-     3|   23     5     7
-MAIN: rcv event, t=10005.141, at 2 src: 1, dest: 2, contents:   1   0   1   3
-At time t=10005.141, rtupdate2() called. node 2 receives a packet from node 1
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     1     5
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=10005.407, at 1 src: 0, dest: 1, contents:   0   4   3   5
-At time t=10005.407, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     2
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=10005.426, at 3 src: 2, dest: 3, contents:   1   1   0   2
-At time t=10005.426, rtupdate3() called. node 3 receives a packet from node 2
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     3
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=10005.644, at 2 src: 0, dest: 2, contents:   0   4   3   5
-At time t=10005.644, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     1     5
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=10006.354, at 3 src: 0, dest: 3, contents:   0   4   3   5
-At time t=10006.354, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     3
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=10006.502, at 0 src: 2, dest: 0, contents:   1   1   0   2
-At time t=10006.502, rtupdate0() called. node 0 receives a packet from node 2
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|   20     4    10
-dest 2|   21     3     9
-     3|   23     5     7
-MAIN: rcv event, t=10006.673, at 0 src: 1, dest: 0, contents:   1   0   1   3
-At time t=10006.673, rtupdate0() called. node 0 receives a packet from node 1
-                via     
-   D0 |    1     2    3 
-  ----|-----------------
-     1|   20     4    10
-dest 2|   21     3     9
-     3|   23     5     7
-MAIN: rcv event, t=10006.926, at 3 src: 0, dest: 3, contents:   0   4   3   5
-At time t=10006.926, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     3
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=10007.105, at 1 src: 0, dest: 1, contents:   0   4   3   5
-At time t=10007.105, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     2
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=10007.122, at 2 src: 0, dest: 2, contents:   0   4   3   5
-At time t=10007.122, rtupdate2() called. node 2 receives a packet from node 0
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     1     5
+     0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
 MAIN: rcv event, t=20000.000, at 0At time t=20000.000, linkhandler0() called 
@@ -976,48 +824,48 @@ New cost of linkhandler1 0 is: 1
              via   
    D1 |    0     2 
   ----|-----------
-     0|    1     2
+     0|    1     3
 dest 2|    3     1
      3|    5     3
-MAIN: rcv event, t=20000.010, at 3 src: 0, dest: 3, contents:   0   1   2   4
-At time t=20000.010, rtupdate3() called. node 3 receives a packet from node 0
-             via     
-   D3 |    0     2 
-  ----|-----------
-     0|    7     3
-dest 1|    8     3
-     2|    9     2
-MAIN: rcv event, t=20000.650, at 1 src: 0, dest: 1, contents:   0   1   2   4
-At time t=20000.650, rtupdate1() called. node 1 receives a packet from node 0
-             via   
-   D1 |    0     2 
-  ----|-----------
-     0|    1     2
-dest 2|    3     1
-     3|    5     3
-MAIN: rcv event, t=20001.203, at 2 src: 0, dest: 2, contents:   0   1   2   4
-At time t=20001.203, rtupdate2() called. node 2 receives a packet from node 0
+MAIN: rcv event, t=20000.604, at 2 src: 0, dest: 2, contents:   0   1   2   4
+At time t=20000.604, rtupdate2() called. node 2 receives a packet from node 0
                 via     
    D2 |    0     1    3 
   ----|-----------------
-     0|    3     1     5
+     0|    3     2     6
 dest 1|    4     1     5
      3|    7     4     2
-MAIN: rcv event, t=20001.223, at 2 src: 1, dest: 2, contents:   0   0   1   3
-At time t=20001.223, rtupdate2() called. node 2 receives a packet from node 1
-                via     
-   D2 |    0     1    3 
-  ----|-----------------
-     0|    3     1     5
-dest 1|    4     1     5
-     3|    7     4     2
-MAIN: rcv event, t=20001.975, at 0 src: 1, dest: 0, contents:   0   0   1   3
-At time t=20001.975, rtupdate0() called. node 0 receives a packet from node 1
+MAIN: rcv event, t=20000.822, at 0 src: 1, dest: 0, contents:   1   0   1   3
+At time t=20000.822, rtupdate0() called. node 0 receives a packet from node 1
                 via     
    D0 |    1     2    3 
   ----|-----------------
      1|    1     4    10
 dest 2|    2     3     9
      3|    4     5     7
+MAIN: rcv event, t=20001.037, at 3 src: 0, dest: 3, contents:   0   1   2   4
+At time t=20001.037, rtupdate3() called. node 3 receives a packet from node 0
+             via     
+   D3 |    0     2 
+  ----|-----------
+     0|    7     4
+dest 1|    8     3
+     2|    9     2
+MAIN: rcv event, t=20001.738, at 1 src: 0, dest: 1, contents:   0   1   2   4
+At time t=20001.738, rtupdate1() called. node 1 receives a packet from node 0
+             via   
+   D1 |    0     2 
+  ----|-----------
+     0|    1     3
+dest 2|    3     1
+     3|    5     3
+MAIN: rcv event, t=20002.570, at 2 src: 1, dest: 2, contents:   1   0   1   3
+At time t=20002.570, rtupdate2() called. node 2 receives a packet from node 1
+                via     
+   D2 |    0     1    3 
+  ----|-----------------
+     0|    3     2     6
+dest 1|    4     1     5
+     3|    7     4     2
 
-Simulator terminated at t=20001.974609, no packets in medium
+Simulator terminated at t=20002.570312, no packets in medium
